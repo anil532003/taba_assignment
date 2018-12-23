@@ -3,6 +3,9 @@
 ### Anil Shukla                : 11810040
 ### Babu Rajendra Kumar Koduru : 11810125
 
+#source("https://raw.githubusercontent.com/anil532003/taba_assignment/master/app.R")
+#runGitHub("taba_assignment", "anil532003")
+
 library("shiny")
 if (!require(tm)) {install.packages("tm")}
 if (!require(wordcloud)) {install.packages("wordcloud")}
