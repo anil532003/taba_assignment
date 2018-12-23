@@ -1,6 +1,7 @@
-#---------------------------------------------------------------------#
-#               k-means Clustering App                               #
-#---------------------------------------------------------------------#
+####Submitted by:
+### Shradha Kalra              : 11810004
+### Anil Shukla                : 11810040
+### Babu Rajendra Kumar Koduru : 11810125
 
 library("shiny")
 if (!require(tm)) {install.packages("tm")}
