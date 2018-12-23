@@ -72,10 +72,13 @@ server <- shinyServer(function(input, output, session) {
   Dataset <- reactive({
     if (is.null(input$file) || is.null(input$langfile)) { return(NULL) }
     else{
+      windowsFonts(devanew=windowsFont("Devanagari new normal"))
       model = udpipe_load_model(input$langfile$datapath) 
+      windowsFonts(devanew=windowsFont("Devanagari new normal"))
       Data <- readLines(input$file$datapath)
-      cleantext =  textclean(Data)
-      x <- udpipe_annotate(model, x = cleantext)
+      windowsFonts(devanew=windowsFont("Devanagari new normal"))
+      #cleantext =  textclean(Data)
+      x <- udpipe_annotate(model, x = Data)
       x <- as.data.frame(x)
       return(x)
     }
